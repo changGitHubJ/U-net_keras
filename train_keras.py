@@ -27,7 +27,7 @@ def main(data, model):
     y_test = data.read_labels('./data/testLABEL256.txt', TEST_DATA_SIZE)
     
     print("Creating model...")
-    model.create_model()
+    model.create_model(multi_gpu=False)
 
     print("Now training...")
     history = model.training(x_train, y_train, x_test, y_test)
